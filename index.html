@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURENT</title>
+    <meta property="og:image" content="https://www.uengage.in/images/addo/logos/image-1698737895.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <style>
+        body{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        .mainnav{
+            display: flex;
+            justify-content: space-between;
+           position: sticky;
+           top: 2px;
+           z-index: 10;
+            height: 20px;
+            padding: 20px;
+            background-color: rgb(249, 246, 241);
+
+
+        }
+        nav{
+            display: flex;
+            /* justify-content: space-around; */
+            gap: 20px;
+            
+        }
+        a,a:visited,a:active{
+            color: black;
+            text-decoration: none;
+
+        }
+
+        
+         .bgimg{
+            display: flex;
+            background-image: url(biryani.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            margin-top: 10px;
+         }
+         .imgcontent{
+            display: flex;
+            align-items: flex-end;
+            color: aliceblue;
+         }
+        
+         #section2 {
+    align-items: center; 
+    padding: 50px 50px;
+    margin-left: 100px;
+    margin-right: 30px;
+}
+
+.section2a img {
+    float: left;
+    width: 500px; 
+    height: 600px;
+    border-radius: 5px; 
+    opacity: 0.8;
+    padding-right:50px ;
+}
+.section2a img:hover{
+    opacity: 1;
+}
+
+.section2b {
+   margin: 20px;
+    text-align: center;
+}
+.padd{
+    padding-top: 60px;
+}
+.padd2{
+    padding-top: 20px;
+}
+.h1-tag{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+
+}
+.h2-tag{
+    font-style: italic;
+}
+.h3-tag{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.p-tag{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+#section3 {
+    align-items: center; 
+    padding: 50px 50px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+.section3a img {
+    float: right;
+    border-radius: 5px; 
+    opacity: 0.8;
+    width: 500px;
+    height: 600px;
+    opacity: 0.8;
+    margin: 60px auto; 
+}
+.section3b {
+   margin: 5px;
+   float: left;
+    text-align: left;
+    padding-right:10px ;
+    overflow: hidden;
+}
+.section3a img:hover{
+    opacity: 1;
+}
+#special {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    clear: both;  
+}
+
+.border {
+    border: 2px solid rgb(198, 176, 176);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.shadow{
+    width: 30px;
+  height: 10px;
+  box-shadow: 5px 5px 2px lightblue;
+}
+.card-image{
+    width:90%;
+    height: 200px;
+    opacity: 0.7;
+}
+.card-image:hover{
+    opacity: 1;
+}
+.button-add{
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: rgb(207, 227, 227);
+}
+.button-add:hover{
+    background-color: rgb(234, 222, 208);
+}
+
+footer{
+    height: 140px;
+    background-color: rgb(242, 228, 211);
+}
+
+#contact{
+    align-items: center;
+    text-align: center;
+}
+.footer2{
+    margin-top: 10px;
+   padding: 1px 0px;
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color: rgb(25, 20, 13);
+}
+.p1{
+    margin-left: 120px;
+}
+.p2{
+    padding-left: 600px;
+}
+.break{
+    margin: 20px;
+    font-size:48px;
+    color:black
+}    
+.h22{
+    padding-top: 20px; 
+    text-align: center;
+}
+/* .stylee{
+    font-size:48px;
+    color:black
+} */
+
+
+    </style>
+</head>
+<body>
+    <script>
+        var navlist = [ "ABOUT" , "SPECIALS" , "CONTACT"]
+        var navclass = ['#section2','#section3','#special','#contact']
+        
+        var navdiv = document.createElement("div");
+        var biryaniworld = document.createElement("a");
+        biryaniworld.innerHTML = "BIRYANI WORLD'S"
+        biryaniworld.href='#'
+        biryaniworld.classList.add('biryani')
+        navdiv.append(biryaniworld)
+        
+        var nav = document.createElement("nav");
+        
+        for(i=0;i<navlist.length;i++){
+            var list = document.createElement("a")
+            list.innerHTML = navlist[i]
+            list.href = navclass[i];
+            nav.append(list)
+        }
+        navdiv.append(nav)
+        document.body.appendChild(navdiv);
+        // console.log(navdiv)
+        navdiv.classList.add('mainnav')
+
+        var div2 = document.createElement("div");
+        div2.classList.add('bgimg')
+
+        var imgfull = document.createElement("h2");
+        imgfull.classList.add("imgcontent");
+        imgfull.innerText="BIRYANI'S WORLD"
+
+        div2.append(imgfull);
+        document.body.append(div2)
+
+        var section = document.createElement("section");
+        section.id="section2"
+
+        var div3 = document.createElement("div")
+        div3.classList.add('section2a')
+
+        var img = document.createElement("img")
+        img.setAttribute('src',"biryani2.jpg")
+
+        div3.append(img)
+        section.append(div3)
+        document.body.append(section)
+
+        var div4 = document.createElement("div")
+        div4.classList.add('section2b')
+
+        var h11 = document.createElement("h1")
+        h11.innerHTML="About Biryani's World"
+        h11.classList.add('h1-tag')
+        div4.append(h11)
+
+        var h21 = document.createElement("h2")
+        h21.innerHTML="Tradition since 1992"
+        h11.classList.add('h2-tag')
+        div4.append(h21)
+
+        heading = ["At Biryani's World, we celebrate the rich heritage and flavors of authentic biryani. Established in 1992 by Sathish, our journey began with a simple goal: to bring the finest biryani recipes to life using fresh ingredients, traditional cooking methods, and a passion for excellence.","Our biryanis are crafted with a perfect blend of fragrant basmati rice, tender meats, and a medley of handpicked spices, slow-cooked to perfection. Each dish is a tribute to the diverse culinary traditions of India, with flavors that will transport you to a world of unforgettable taste.","Whether you're savoring our signature Hyderabadi Dum Biryani or indulging in the unique flavors of our Kunda Biryani, every bite tells a story of love, dedication, and tradition. Join us and experience the true essence of biryani—where every meal is a celebration of taste and culture."]
+        
+        for(i = 0 ; i < heading.length;i++){
+            var p1 = document.createElement('p')
+            p1.innerHTML = heading[i]
+            p1.classList.add("p-tag")
+            div4.append(p1)
+        }
+        document.body.append(div4)
+
+
+
+        var section2 = document.createElement("section");
+        section2.id="section3"
+
+        var div5 = document.createElement("div")
+        div5.classList.add('section3b')
+        section2.append(div5)
+
+        document.body.append(section2)
+
+        var h12 = document.createElement("h1")
+        h12.innerHTML="OUR MENU"
+        h12.classList.add('h1-tag','padd')
+        div5.append(h12)
+
+        h3tag = ["CHIKEN BIRYANI" , "MUTTON BIRYANI" , "PROWN BIRYANI" , "VEG BIRYANI" ,"PANNER BITYANI"]
+        ptag = ["Aromatic basmati rice layered with tender chicken, spices, and herbs, served with raita." , " Succulent mutton slow-cooked with fragrant basmati rice, spices, and herbs, served with raita." , "Juicy prawns cooked with aromatic basmati rice, exotic spices, and herbs, served with raita." , "A delightful medley of garden-fresh vegetables, basmati rice, and  served with raita." , "Soft paneer cubes cooked with fragrant basmati rice, aromatic spices, and herbs, served with raita."]
+
+        for( i = 0 ; i < h3tag.length ; i++){
+           
+            var desci = document.createElement("h3")
+            desci.innerHTML = h3tag[i]
+            desci.classList.add("h3-tag","padd2")
+            div5.append(desci)
+
+            var desc = document.createElement("p")
+            desc.innerHTML = ptag[i]
+            desc.classList.add("h2-tag")
+            div5.append(desc)
+
+        }
+
+        var div6 = document.createElement("div")
+        div6.classList.add('section3a')
+
+        var imgg = document.createElement("img")
+        imgg.setAttribute('src',"muttonbiryani.jpg")
+
+        div6.append(imgg)
+        section2.append(div6)
+
+
+
+        //cards
+        var section3 = document.createElement("section");
+        section3.id="special"
+        srcc = ["butterchiken.avif","mutton.avif","fishbiryani.avif","chiken65.avif","butterchiken.avif","mutton.avif","fishbiryani.avif","chiken65.avif"]
+        h3 = ["Butter Biryani" , "Mutton Biryani Special" , "Fish Biryani" , "Chiken65 Biryani","Butter Biryani" , "Mutton Biryani Special" , "Fish Biryani" , "Chiken65 Biryani" ]
+        p = ['265','320','330','210','265','320','330','210']
+        cardd = ["A rich and creamy butter biryani packed with fragrant spices and a melt-in-your-mouth texture, perfect for indulgence." , "A flavorful and aromatic plate of tender mutton biryani that is sure to satisfy your cravings." , "A layered with aromatic rice and infused with coastal spices, delivering a burst of fresh and bold flavors in every bite." , "Flavourful Basmati Biryani Rice topped with Classic chicken 65. Served with Raita & Mirch Ka Salan","A rich and creamy butter biryani packed with fragrant spices and a melt-in-your-mouth texture, perfect for indulgence." , "A flavorful and aromatic plate of tender mutton biryani that is sure to satisfy your cravings." , "A layered with aromatic rice and infused with coastal spices, delivering a burst of fresh and bold flavors in every bite." , "Flavourful Basmati Biryani Rice topped with Classic chicken 65. Served with Raita & Mirch Ka Salan"]
+
+        for(i = 0 ; i < srcc.length ; i++){
+            var border = document.createElement('div')
+            border.classList.add("border")
+            section3.append(border)
+
+
+            var card = document.createElement("img")
+            card.setAttribute('src',srcc[i])
+            card.classList.add("card-image" ,"shadow")
+
+            var cardh3 = document.createElement("h3")
+            cardh3.innerText = h3[i]
+
+            var cardp = document.createElement("p")
+            cardp.innerText = "PRICE:" + p[i]+ "/-"
+
+            var cardpdesc = document.createElement("p")
+            cardpdesc.innerText = cardd[i]
+
+            var btn = document.createElement("a")
+            btn.innerHTML = "ADD"
+            btn.classList.add("button-add")
+            btn.href = "#";
+
+            border.append(card,cardh3,cardp,cardpdesc,btn)
+        }
+        document.body.append(section3)
+
+
+
+        var footer = document.createElement("footer");
+        footer.id = 'contact';
+        var h22 = document.createElement("h2");
+        h22.innerText = "CONTACT US:";
+        h22.classList.add("h22");
+        var div7 = document.createElement("div");
+        div7.classList.add("contact-a");
+        var classs = ["fa fa-phone", "fa fa-envelope", "fa fa-whatsapp"];
+        var hreff = ["tel:9398320685", "mailto:sklp.katla2001@gmail.com", "https://wa.me/9876543210?text=Hello"];
+        for (var i = 0; i < classs.length; i++) {
+            var aa = document.createElement("a");
+            aa.href = hreff[i];
+            aa.classList.add("break");
+            aa.style.margin = "10px"; 
+            var icon = document.createElement("i"); 
+            icon.className = classs[i];
+            aa.appendChild(icon); 
+            div7.appendChild(aa); 
+        }
+        footer.appendChild(h22);
+        footer.appendChild(div7);
+        document.body.appendChild(footer);
+
+    </script>
+    
+    
+</body>
+</html>
